@@ -43,7 +43,7 @@ const MovieCard = ({
 		<StyledCard>
 			<StyledImage
 				src={`https://image.tmdb.org/t/p/original/${image}`}
-				alt="image"
+				alt={title}
 			/>
 			<StyledContainer style={{ fontSize: "20px", fontWeight: "700" }}>
 				{title}
