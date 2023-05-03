@@ -20,7 +20,6 @@ const HomePage = () => {
 			.get(`${BASE_URL}/search/movie?api_key=${API_KEY}&query=${search}`)
 			.then((response) => setMovieData(response.data.results));
 	};
-	console.log(movieData);
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const element = e.target as HTMLInputElement;
 
