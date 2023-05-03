@@ -36,7 +36,7 @@ const HomePage = () => {
 				{movieData?.length > 0 &&
 					movieData?.map((element) => (
 						<MovieCard
-							image={element.poster_path}
+							image={element.poster_path ?? element.backdrop_path}
 							title={element.title}
 							rating={element.vote_average}
 							overview={element.overview}

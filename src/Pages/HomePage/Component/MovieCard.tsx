@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface MovieCardProps {
 	image: string;
 	title: string;
-	rating: string;
+	rating: number;
 	overview: string;
 	release_date: string;
 }
@@ -51,7 +51,7 @@ const MovieCard = ({
 			<StyledContainer>
 				{isReadMore ? overview.slice(0, 150) : overview}
 				{overview?.length > 150 && (
-					<span onClick={toggleReadMore} className="read-or-hide">
+					<span onClick={toggleReadMore} >
 						{isReadMore ? "...read more" : " show less"}
 					</span>
 				)}
