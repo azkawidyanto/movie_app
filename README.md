@@ -5,6 +5,7 @@ How to Use this App
 1. Click on https://movie-app-1234.vercel.app/
 2. Search a movie by Name
 3. Will Appear list of movie by name taht you typed
+4. you could tap add read more if you wanna know more about movie overview
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

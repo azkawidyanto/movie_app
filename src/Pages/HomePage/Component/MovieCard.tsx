@@ -50,9 +50,11 @@ const MovieCard = ({
 			</StyledContainer>
 			<StyledContainer>
 				{isReadMore ? overview.slice(0, 150) : overview}
-				<span onClick={toggleReadMore} className="read-or-hide">
-					{isReadMore ? "...read more" : " show less"}
-				</span>
+				{overview?.length > 150 && (
+					<span onClick={toggleReadMore} className="read-or-hide">
+						{isReadMore ? "...read more" : " show less"}
+					</span>
+				)}
 			</StyledContainer>
 			<StyledContainer>{`Release Date: ${release_date}`}</StyledContainer>
 			<StyledContainer
