@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 interface MovieCardProps {
 	image: string;
@@ -34,6 +35,10 @@ const MovieCard = ({
 	rating,
 	release_date,
 }: MovieCardProps) => {
+	const [isReadMore, setIsReadMore] = useState(true);
+	const toggleReadMore = () => {
+		setIsReadMore(!isReadMore);
+	};
 	return (
 		<StyledCard>
 			<StyledImage
@@ -43,7 +48,12 @@ const MovieCard = ({
 			<StyledContainer style={{ fontSize: "20px", fontWeight: "700" }}>
 				{title}
 			</StyledContainer>
-			<StyledContainer>{overview}</StyledContainer>
+			<StyledContainer>
+				{isReadMore ? overview.slice(0, 150) : overview}
+				<span onClick={toggleReadMore} className="read-or-hide">
+					{isReadMore ? "...read more" : " show less"}
+				</span>
+			</StyledContainer>
 			<StyledContainer>{`Release Date: ${release_date}`}</StyledContainer>
 			<StyledContainer
 				style={{ fontWeight: 700 }}
