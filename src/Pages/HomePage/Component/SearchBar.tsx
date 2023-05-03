@@ -25,7 +25,12 @@ interface SearchBarProps {
 const SearchBar = ({ onChange, onSubmit }: SearchBarProps) => {
 	return (
 		<StyledContainer>
-			<StyledInput onChange={onChange} placeholder="Search Movie by Name" />
+			<StyledInput
+				id="movie"
+				onChange={onChange}
+				aria-label="search-movie"
+				placeholder="Search Movie by Name"
+			/>
 			<Button onClick={onSubmit}> Search Movie</Button>
 		</StyledContainer>
 	);
